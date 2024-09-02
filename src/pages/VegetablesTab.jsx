@@ -17,7 +17,7 @@ const VegetablesTab = () => {
   const handleDeleteProduct = async (id) => {
     try {
       await deleteVegtableProduct(id);
-      window.location.reload();
+      // window.location.reload();
     } catch (error) {
       console.error("Failed to delete product:", error);
     }
@@ -68,7 +68,7 @@ const VegetablesTab = () => {
       console.log(values);
       await createVegtableProduct({
         ...values,
-        id: Math.round(Math.random() * 100000000),
+        id: Math.round(Math.random() * 100000000)+"",
         seasons: values.seasons.length ? values.seasons : null,
       });
       form.resetFields();

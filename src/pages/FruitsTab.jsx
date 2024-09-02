@@ -64,7 +64,7 @@ const FruitsTab = () => {
       const values = await form.validateFields();
       await createFruitProduct({
         ...values,
-        id: Math.round(Math.random() * 100000000),
+        id: Math.round(Math.random() * 100000000)+"",
         seasons: values.seasons.length ? values.seasons : null,
       });
       form.resetFields();
